@@ -12,6 +12,17 @@ def registro(): #registrar los usuarios en nomina
     except ValueError:
         print(f"Ocurrio un error: {e}")
 
+def nomina():
+    print("Calcular Nómina")
+    # Código para calcular nómina
+    for e in empleados:#recorrer la lista
+        diario = e["Salario"] / 30
+        mes = diario * e["Dias"]
+        mes = mes * 0.92
+        if e["Salario"] < 2600000:
+            mes = mes + aux
+        print(f"El salario de {e['nombre']} es de {mes}")
+    return
 
 empleados = []
 aux = 160000
